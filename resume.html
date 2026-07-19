@@ -51,7 +51,6 @@
     .sheet {
       background: #fff;
       width: 210mm;
-      min-height: 297mm;
       margin: 20px auto;
       padding: 16mm 16mm 14mm;
       box-shadow: 0 4px 24px rgba(0,0,0,0.15);
@@ -205,8 +204,8 @@
         </div>
         <ul>
           <li>Built <strong>from scratch</strong> a real-time, <strong>millisecond-latency</strong> alarm platform on Kafka, Redis, and Kinesis (containerized with Docker), exposing an API serving alarms (warning, error, operational) from DynamoDB with event open/close tracking and <strong>Protobuf-encoded payloads</strong>; also streamed alarm data via Kinesis into Delta tables for analytics and data science teams.</li>
-          <li>Built an OPC-UA IoT pipeline <strong>from scratch</strong> after an AWS Greengrass POC fell short — asynchronously traversing the OPC-UA node tree, handling encryption, and streaming to AWS MSK, with local-server buffering for resilience; enhanced data availability by <strong>96%</strong>.</li>
           <li>Built MQTT ingestion pulling from a broker and pushing to MSK using async Python libraries, fully containerized in Docker.</li>
+          <li>Built an OPC-UA IoT pipeline <strong>from scratch</strong> after an AWS Greengrass POC fell short — asynchronously traversing the OPC-UA node tree, handling encryption, and streaming to AWS MSK, with local-server buffering for resilience; enhanced data availability by <strong>96%</strong>.</li>
           <li>Re-built a legacy Databricks streaming job as a Dockerized service (MSK → Kinesis) with <strong>KEDA autoscaling</strong> on Kafka lag, cutting ingestion latency from minutes to <strong>10–20 seconds</strong>.</li>
           <li>Built a <strong>KEDA-scalable</strong> service replicating data from prod Kafka to QA/Dev Kafka with configurable filtering and row limits, keeping non-prod costs low.</li>
           <li>Optimized Databricks/PySpark pipelines for solar &amp; wind farm data, cutting processing time and latency by <strong>~62%</strong> by switching the source from S3 to Kinesis.</li>
