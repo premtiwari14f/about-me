@@ -2,7 +2,7 @@
 
 A clean, responsive personal resume site (dark/light mode) built with plain HTML, CSS, and a tiny bit of JavaScript. No build step required.
 
-🔗 **Live site:** _https://premtiwari14f.github.io/prem-tiwari-resume/_ (available after enabling GitHub Pages)
+🔗 **Live site:** _https://sepkt.github.io/prem-tiwari/_
 
 ## Run locally
 
@@ -27,7 +27,7 @@ python3 -m http.server 8000
 2. Go to **Settings → Pages**.
 3. Under **Build and deployment → Source**, choose **Deploy from a branch**.
 4. Select branch **`main`** and folder **`/ (root)`**, then **Save**.
-5. Your site goes live at `https://<username>.github.io/prem-tiwari-resume/` in a minute.
+5. Your site goes live at `https://sepkt.github.io/prem-tiwari/` in a minute.
 
 ## Customize
 

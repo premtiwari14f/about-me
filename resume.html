@@ -108,14 +108,16 @@
       .sheet { width: auto; min-height: auto; margin: 0; padding: 0; box-shadow: none; }
       a { color: var(--ink); }
       header.head .contact a { color: var(--ink); }
-      section, .role { page-break-inside: avoid; }
       h2 { page-break-after: avoid; }
+      .role-head { page-break-after: avoid; }
+      li { page-break-inside: avoid; }
     }
   </style>
 </head>
 <body>
   <div class="toolbar">
-    <button class="btn-print" onclick="window.print()">⬇ Download PDF / Print</button>
+    <a class="btn-print" href="Prem_Tiwari_Resume.pdf" download="Prem_Tiwari_Resume.pdf">⬇ Download PDF</a>
+    <button class="btn-back" onclick="window.print()">🖨 Print</button>
     <a class="btn-back" href="index.html">← Back to portfolio</a>
   </div>
 
@@ -125,16 +127,16 @@
       <div class="title">Software Engineer II · Backend &amp; Data Engineering</div>
       <div class="contact">
         Bengaluru, Karnataka, India &nbsp;•&nbsp; +91 96448 46577 &nbsp;•&nbsp;
-        <a href="mailto:premtiwari14f@gmail.com">premtiwari14f@gmail.com</a><br />
-        <a href="https://premtiwari14f.github.io/about-me/">Portfolio</a> &nbsp;•&nbsp;
+        <a href="mailto:sepremtiwari@gmail.com">sepremtiwari@gmail.com</a><br />
+        <a href="https://sepkt.github.io/prem-tiwari/">Portfolio</a> &nbsp;•&nbsp;
         <a href="https://www.linkedin.com/in/premtiwari14f/">linkedin.com/in/premtiwari14f</a> &nbsp;•&nbsp;
-        <a href="https://github.com/premtiwari14f">github.com/premtiwari14f</a> &nbsp;•&nbsp;
+        <a href="https://github.com/sepkt">github.com/sepkt</a> &nbsp;•&nbsp;
         <a href="https://leetcode.com/u/prem14f/">leetcode.com/u/prem14f</a>
       </div>
     </header>
 
     <section>
-      <h2>Summary</h2>
+      <h2>About Me</h2>
       <p class="summary">
         Software Engineer II with 3.5+ years building scalable data platforms and cloud-native backend systems —
         real-time streaming, high-throughput pipelines, CDC, and observability at scale. Strong across Python,
@@ -187,11 +189,11 @@
         </div>
         <ul>
           <li>Migrated multi-task streaming jobs from all-purpose to job clusters, cutting compute costs by <strong>$200K+ annually</strong>.</li>
-          <li>Re-architected legacy Snowflake pipelines onto Databricks from scratch — a reusable, config-driven template ingesting from Airbyte, REST APIs, and Databricks connectors as parallel tasks in one multi-task job, feeding a medallion pipeline (S3 → Auto Loader → Spark Structured Streaming → Gold).</li>
-          <li>Built a CDC pipeline capturing change-data-capture from the PostgreSQL binlog using Flink, streaming into Kinesis (one shard per table) and landing into Delta tables via medallion architecture.</li>
+          <li>Re-architected legacy Snowflake pipelines onto Databricks <strong>from scratch</strong> — a reusable, config-driven template ingesting from Airbyte, REST APIs, and Databricks connectors as parallel tasks in one multi-task job, feeding a medallion pipeline (S3 → Auto Loader → Spark Structured Streaming → Gold).</li>
+          <li>Built a <strong>CDC pipeline</strong> capturing change-data-capture from the PostgreSQL binlog using <strong>Flink</strong>, streaming into Kinesis (one shard per table) and landing into Delta tables via medallion architecture.</li>
           <li>Drove CI/CD adoption via Databricks Asset Bundles, enabling automated, consistent deployments across environments.</li>
-          <li>Migrated <strong>1900+ files</strong> into a new parent folder with zero breaking changes, updating CI runners, GitLab CI, and AWS Secrets Manager fetching.</li>
-          <li>Built a high-availability log pipeline (CloudWatch → Kinesis → Logstash → OpenSearch) with sub-second search and zero-data-loss ingestion at scale.</li>
+          <li>Migrated <strong>1900+ files</strong> into a new parent folder with <strong>zero breaking changes</strong>, updating CI runners, GitLab CI, and AWS Secrets Manager fetching.</li>
+          <li>Built a high-availability log pipeline (CloudWatch → Kinesis → Logstash → OpenSearch) with <strong>sub-second search</strong> and <strong>zero-data-loss</strong> ingestion at scale.</li>
           <li>Hardened legacy ingestion (Airbyte → S3 → Airflow → Snowflake), reducing daily failures by <strong>~34%</strong>.</li>
         </ul>
       </div>
@@ -202,11 +204,11 @@
           <span class="date">Feb 2024 – Sep 2025</span>
         </div>
         <ul>
-          <li>Built from scratch a real-time, millisecond-latency alarm platform on Kafka, Redis, and Kinesis (containerized with Docker), exposing an API serving alarms (warning, error, operational) from DynamoDB with event open/close tracking and Protobuf-encoded payloads; also streamed alarm data via Kinesis into Delta tables for analytics and data science teams.</li>
-          <li>Built an OPC-UA IoT pipeline from scratch after an AWS Greengrass POC fell short — asynchronously traversing the OPC-UA node tree, handling encryption, and streaming to AWS MSK, with local-server buffering for resilience; enhanced data availability by <strong>96%</strong>.</li>
+          <li>Built <strong>from scratch</strong> a real-time, <strong>millisecond-latency</strong> alarm platform on Kafka, Redis, and Kinesis (containerized with Docker), exposing an API serving alarms (warning, error, operational) from DynamoDB with event open/close tracking and <strong>Protobuf-encoded payloads</strong>; also streamed alarm data via Kinesis into Delta tables for analytics and data science teams.</li>
+          <li>Built an OPC-UA IoT pipeline <strong>from scratch</strong> after an AWS Greengrass POC fell short — asynchronously traversing the OPC-UA node tree, handling encryption, and streaming to AWS MSK, with local-server buffering for resilience; enhanced data availability by <strong>96%</strong>.</li>
           <li>Built MQTT ingestion pulling from a broker and pushing to MSK using async Python libraries, fully containerized in Docker.</li>
-          <li>Re-built a legacy Databricks streaming job as a Dockerized service (MSK → Kinesis) with KEDA autoscaling on Kafka lag, cutting ingestion latency from minutes to <strong>10–20 seconds</strong>.</li>
-          <li>Built a KEDA-scalable service replicating data from prod Kafka to QA/Dev Kafka with configurable filtering and row limits, keeping non-prod costs low.</li>
+          <li>Re-built a legacy Databricks streaming job as a Dockerized service (MSK → Kinesis) with <strong>KEDA autoscaling</strong> on Kafka lag, cutting ingestion latency from minutes to <strong>10–20 seconds</strong>.</li>
+          <li>Built a <strong>KEDA-scalable</strong> service replicating data from prod Kafka to QA/Dev Kafka with configurable filtering and row limits, keeping non-prod costs low.</li>
           <li>Optimized Databricks/PySpark pipelines for solar &amp; wind farm data, cutting processing time and latency by <strong>~62%</strong> by switching the source from S3 to Kinesis.</li>
           <li>Built a file download API (DocumentDB metadata + AWS S3 retrieval) with cursor-based pagination across web views listing hundreds of files.</li>
         </ul>
@@ -219,10 +221,10 @@
         </div>
         <ul>
           <li>Built new-customer ingestion tracking wind-turbine events from API data (warning, error, running, service) with accurate logging; authored LLD &amp; HLD.</li>
-          <li>Built from scratch a new API data source with checkpointing (persisting the last-polled timestamp for gap-free resumption), pushing real-time data into Delta tables; increased data-collection efficiency by <strong>100%</strong>.</li>
+          <li>Built <strong>from scratch</strong> a new API data source with <strong>checkpointing</strong> (persisting the last-polled timestamp for gap-free resumption), pushing real-time data into Delta tables; increased data-collection efficiency by <strong>100%</strong>.</li>
           <li>Built a monitoring system surfacing data latency across source services and pinpointing bottlenecks; reduced API latency by <strong>36%</strong>.</li>
           <li>Automated the previously manual, accuracy-based ML model registration to AWS S3, saving the team <strong>12 hrs/week</strong>; raised unit-test coverage to <strong>95%</strong>.</li>
-          <li>Delivered seamless Databricks LTS upgrades across <strong>50+</strong> jobs with rigorous data-quality testing and zero pipeline failures.</li>
+          <li>Delivered seamless Databricks <strong>LTS</strong> upgrades across <strong>50+</strong> jobs with rigorous <strong>data-quality testing</strong> and <strong>zero pipeline failures</strong>.</li>
         </ul>
       </div>
     </section>
